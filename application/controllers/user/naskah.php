@@ -12,6 +12,13 @@ class naskah extends CI_Controller {
 		$this->load->view('t_user/footer');
 
 	}
+	public function download($id)
+	{
+		$this->load->helper('download');
+		$filepem  = $this->M_tema->download($id);
+		$file     = 'assets/upload/naskah/' . $filepem['content'];
+		force_download($file, null);
+	}
 
 }
 

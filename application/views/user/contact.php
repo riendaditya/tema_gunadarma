@@ -62,7 +62,7 @@
 						<div class="email">
 							<i class="bi bi-envelope"></i>
 							<h4>Email:</h4>
-							<p>info@example.com</p>
+							<p>Temagunadarma1992@gmail.com</p>
 						</div>
 
 						<div class="phone">
@@ -77,7 +77,7 @@
 
 				<div class="col-lg-8 mt-5 mt-lg-0">
 					<?php echo $this->session->flashdata('pesan'); ?>
-					<form action="<?php echo base_url('user/contact/send') ?>" method="post" role="form" class="php-email-form">
+					<form action="<?php echo base_url('user/contact/send') ?>" method="post">
 						<div class="row">
 							<div class="col-md-6 form-group">
 								<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -92,13 +92,12 @@
 						<div class="form-group mt-3">
 							<textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
 						</div>
+
 						<div class="text-center"><button type="submit">Send Message</button></div>
 					</form>
 
 				</div>
-
 			</div>
-
 		</div>
 	</section><!-- End Contact Section -->
 </main>

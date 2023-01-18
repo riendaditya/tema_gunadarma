@@ -33,7 +33,7 @@
 							<td><?php echo $no++ ?></td>
 							<td><?php echo $nk->judul ?></td>
 							<td><?php echo $nk->kategori ?></td>
-							<td><a class="btn btn-sm btn-success" href="<?php echo base_url('admin/data_naskah/download/' . $nk->id_naskah) ?>"><i class='fas fa-download'> </i> Download File </a></td>
+							<td><a class="btn btn-sm btn-success" href="<?php echo base_url('user/naskah/download/' . $nk->id_naskah) ?>"><i class='fas fa-download'> </i> Download File </a></td>
 						</tr>
 					<?php endforeach; ?>
 				</tbody>

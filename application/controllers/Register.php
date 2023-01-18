@@ -14,12 +14,18 @@ class Register extends CI_Controller
     public function index()
     {
         $this->_rules();
-
+		
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('t_admin/a_header');
-			$this->load->view('t_admin/sidebar');
-            $this->load->view('admin/user');
-            $this->load->view('t_admin/a_footer');
+			$this->session->set_flashdata(
+				'pesan',
+				'<div class="alert alert-danger alert-dismissible fade show" role="alert">
+				<strong>Akun gagal Registrasi !!</strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+				</div>'
+			);
+			redirect('admin/user');
         } else {
             $nama       = $this->input->post('nama');
             $username   = $this->input->post('username');

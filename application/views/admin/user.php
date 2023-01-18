@@ -70,7 +70,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<?php echo form_open_multipart('auth/regist') ?>
+				<?php echo form_open_multipart('register') ?>
 				<div class="form-group">
 					<label>Nama</label>
 					<input type="text" class="form-control" name="nama" placeholder="Masukkan nama" required>
@@ -108,7 +108,7 @@ foreach ($admin as $as) :  $no++; ?>
 					</button>
 				</div>
 				<<div class="modal-body">
-					<?php echo form_open_multipart('admin/user/ch_pass') ?>
+					<?php echo form_open_multipart('admin/user/ch_pass_aksi') ?>
 					<input type="hidden" name="id_user" value="<?php echo base_url('admin/user/ch_pass') . $as->id_user ?>">
 					<div class="form-group">
 						<label>New Password</label>

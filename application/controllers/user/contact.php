@@ -9,7 +9,7 @@ class contact extends CI_Controller
 	{
 		$data['contact'] = $this->M_tema->get_data('contact')->result();
 		$this->load->view('t_user/header');
-		$this->load->view('user/contact');
+		$this->load->view('user/contact', $data);
 		$this->load->view('t_user/footer');
 	}
 
@@ -54,7 +54,7 @@ class contact extends CI_Controller
                 </button>
             </div>'
 		);
-		redirect('dashboard/#footer');
+		redirect('user/contact');
 	}
 }
 

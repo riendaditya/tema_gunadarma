@@ -78,7 +78,7 @@
 					</div>
 					<div class="form-group">
 						<label>Password</label>
-						<select name="kategori" class="form-control">
+						<select name="kategori" class="form-control" required="">
 							<option value="">Kategori Naskah</option>
 							<?php foreach ($kategori as $kt) : ?>
 								<option value="<?php echo $kt->jenis_ktg ?>">

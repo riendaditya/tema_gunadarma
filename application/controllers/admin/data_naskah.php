@@ -34,7 +34,16 @@ class Data_naskah extends CI_Controller
 		$this->load->library('upload', $config);
 
 		if (!$this->upload->do_upload('content')) {
-			echo 'gagal';
+			$this->session->set_flashdata(
+				'pesan',
+				'<div class="alert alert-danger alert-dismissible fade show" role="alert">
+					<strong>Naskah Gagal Dibuat, periksa format dan ukuran file</strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+					</div>'
+			);
+			redirect('admin/data_naskah');
 		} else {
 			$content = $this->upload->data();
 			$content = $content['file_name'];
